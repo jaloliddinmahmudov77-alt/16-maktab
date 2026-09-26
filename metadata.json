@@ -1,0 +1,6 @@
+{
+  "name": "Sardoba Tumani 16-Maktab",
+  "description": "Sardoba tumani 16-sonli umumiy o'rta ta'lim maktabi rasmiy veb-sayti va AI yordamchisi",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

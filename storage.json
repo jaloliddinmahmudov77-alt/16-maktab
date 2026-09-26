@@ -1,0 +1,245 @@
+{
+  "schoolInfo": {
+    "name": "Sardoba tumani 16-sonli umumiy o'rta ta'lim maktabi",
+    "shortName": "Sardoba 16-maktab",
+    "foundedDate": "2000-yil 28-sentabr",
+    "legalForm": "Davlat muassasasi (100% davlat ulushi)",
+    "parentMinistry": "Oʻzbekiston Respublikasi Maktabgacha va maktab taʼlimi vazirligi",
+    "address": "99JV+JG, Navoi, Sirdaryo Region, Oʻzbekiston",
+    "mapNote": "Google Xaritalar kodi: 99JV+JG, Navoi, Sirdaryo Region, Oʻzbekiston",
+    "phone": "+998 (94) 160-16-74",
+    "email": "sardoba16maktab@umail.uz",
+    "workHours": "Dushanba - Shanba: 08:00 - 17:00",
+    "activityType": "Umumiy oʻrta taʼlim berish. Maktab ijtimoiy muassasa hisoblanadi.",
+    "principalName": "Qodirova Zulfiya Abdullayevna",
+    "principalTitle": "Maktab direktori",
+    "principalMessage": "Xush kelibsiz! Bizning 16-sonli maktabimiz o'quvchilarga chuqur bilim, yuksak ma'naviyat va zamonaviy ko'nikmalarni berishni o'z oldiga bosh maqsad qilib qo'ygan. Har bir farzandimizning kelajakda davlatimiz va jamiyatimizga munosib xizmat qilishi uchun barcha sharoitlar yaratilgan.",
+    "principalImage": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80",
+    "heroBgImage": "https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=2000&q=80",
+    "stats": {
+      "studentsCount": 480,
+      "teachersCount": 38,
+      "classroomsCount": 22,
+      "higherEduPercent": 88
+    }
+  },
+  "newsList": [
+    {
+      "id": "news-1",
+      "title": "16-maktabda 'Bilimlar kuni' tantanali ravishda nishonlandi",
+      "category": "Tadbirlar",
+      "date": "2025-09-02",
+      "summary": "Sardoba tumani 16-sonli maktabda yangi o'quv yili boshlanishi munosabati bilan bayram tadbiri bo'lib o'tdi.",
+      "content": "Maktab hovlisida yangi 2025-2026 o'quv yili bag'ishlangan 'Bilimlar kuni' tantanasi bo'lib o'tdi. Tadbirda Sardoba tumani Maktabgacha va maktab ta'limi bo'limi vakillari, mahalla faollari hamda ota-onalar ishtirok etishdi. Birinchi sinf o'quvchilariga 'Prezident sovg'asi' topshirildi.",
+      "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1000&q=80",
+      "views": 342,
+      "featured": true
+    },
+    {
+      "id": "news-2",
+      "title": "Informatika va zamonaviy texnologiyalar to'garagi ish boshladi",
+      "category": "Ta'lim",
+      "date": "2025-10-15",
+      "summary": "Maktabimizda o'quvchilar uchun kompyuter savodxonligi va dasturlash bo'yicha bepul to'garaklar tashkil etildi.",
+      "content": "Prezidentimizning 5 ta muhim tashabbusi doirasida maktabimiz informatika xonasida zamonaviy AKT to'garaklari yo'lga qo'yildi. O'quvchilar Python va web-dasturlash asoslarini o'rganishmoqda.",
+      "image": "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1000&q=80",
+      "views": 215,
+      "featured": true
+    },
+    {
+      "id": "news-3",
+      "title": "Tuman fan olimpiadasida o'quvchilarimiz faxrli o'rinlarni egallashdi",
+      "category": "Tanlovlar",
+      "date": "2025-11-20",
+      "summary": "Matematika va fizika fanlaridan tuman bosqichida 16-maktab o'quvchilaridan 3 nafari 1-o'rinni qo'lga kiritdi.",
+      "content": "Sardoba tumani bo'yicha o'tkazilgan umumta'lim fanlari olimpiadasida 9-11 sinf o'quvchilarimiz yuqori natijalarni ko'rsatishdi. Matematika fanidan 10-sinf o'quvchisi Alimov Jasur viloyat bosqichiga yo'llanma oldi.",
+      "image": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1000&q=80",
+      "views": 189,
+      "featured": false
+    },
+    {
+      "id": "news-4",
+      "title": "Maktablaro futbol musobaqasida jamoamiz g'olib bo'ldi",
+      "category": "Sport",
+      "date": "2025-12-05",
+      "summary": "Sardoba tumani maktablari o'rtasida o'tkazilgan 'Quvnoq startlar' va futbol musobaqasi yakunlandi.",
+      "content": "Sportning futbol turi bo'yicha maktabimiz terma jamoasi final uchrashuvida g'alaba qozonib, tuman kubogini maktabimizga olib kelishdi. Barcha g'oliblarga diplom va sovg'alar topshirildi.",
+      "image": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1000&q=80",
+      "views": 156,
+      "featured": false
+    }
+  ],
+  "photoList": [
+    {
+      "id": "p1",
+      "title": "Maktab binosi va hududi",
+      "category": "Sinflar",
+      "url": "https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1000&q=80",
+      "date": "2025-09-01",
+      "description": "Sardoba tumani 16-maktabining zamonaviy ta'mirlangan binosi"
+    },
+    {
+      "id": "p2",
+      "title": "Shinam sinf xonalari",
+      "category": "Dars jarayoni",
+      "url": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1000&q=80",
+      "date": "2025-09-10",
+      "description": "Interaktiv doska va qulay mebellar bilan jihozlangan sinf xonasi"
+    },
+    {
+      "id": "p3",
+      "title": "Informatika xonasi va kompyuterlar",
+      "category": "Dars jarayoni",
+      "url": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1000&q=80",
+      "date": "2025-10-02",
+      "description": "O'quvchilar uchun zamonaviy kompyuter va internet tarmog'i"
+    },
+    {
+      "id": "p4",
+      "title": "Bayram tadbirlaridan fotolavhalar",
+      "category": "Tadbirlar",
+      "url": "https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=1000&q=80",
+      "date": "2025-10-21",
+      "description": "O'zbek tili bayrami va badiiy kechalar"
+    },
+    {
+      "id": "p5",
+      "title": "Maktab kutubxonasi",
+      "category": "Maktab hayoti",
+      "url": "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1000&q=80",
+      "date": "2025-11-05",
+      "description": "5000 dan ortiq badiiy va darslik adabiyotlar jamlangan kutubxona"
+    },
+    {
+      "id": "p6",
+      "title": "Sport zali va musobaqalar",
+      "category": "Sport",
+      "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1000&q=80",
+      "date": "2025-11-12",
+      "description": "O'quvchilarning sport bilan shug'ullanishi uchun barcha sharoitlar"
+    }
+  ],
+  "videoList": [
+    {
+      "id": "v1",
+      "title": "16-maktab hayotidan lavhalar va targ'ibot roligi",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "thumbnail": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1000&q=80",
+      "duration": "03:45",
+      "date": "2025-09-01",
+      "description": "Sardoba tumani 16-sonli maktabning tarixi, dars jarayonlari va yutuqlari aks etgan maxsus videolavha."
+    },
+    {
+      "id": "v2",
+      "title": "Ochiq dars va interaktiv mashg'ulotlar",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "thumbnail": "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1000&q=80",
+      "duration": "05:12",
+      "date": "2025-10-18",
+      "description": "Matematika va ingilz tili darslarida zamonaviy pedagogik texnologiyalarni qo'llash."
+    },
+    {
+      "id": "v3",
+      "title": "Konstitutsiya kuniga bag'ishlangan bayram konserti",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "thumbnail": "https://images.unsplash.com/photo-1465847899084-d164df4dedc6?auto=format&fit=crop&w=1000&q=80",
+      "duration": "08:30",
+      "date": "2025-12-07",
+      "description": "O'quvchilar tomonidan tayyorlangan saxna ko'rinishlari va qo'shiqlar."
+    }
+  ],
+  "teacherList": [
+    {
+      "id": "t1",
+      "name": "Qodirova Zulfiya Abdullayevna",
+      "role": "Maktab direktori",
+      "subject": "O'zbek tili va adabiyoti",
+      "category": "Rahbariyat",
+      "qualification": "Oliy toifali o'qituvchi",
+      "experience": "22 yil",
+      "photo": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80",
+      "email": "z.qodirova@maktab.uz",
+      "awards": [
+        "Xalq ta'limi a'lochisi ko'krak nishoni",
+        "Tuman yil o'qituvchisi-2023"
+      ]
+    },
+    {
+      "id": "t2",
+      "name": "Ergashev Bobur Rustamovich",
+      "role": "O'quv ishlari bo'yicha o'rinbosar",
+      "subject": "Matematika va Informatika",
+      "category": "Aniq fanlar",
+      "qualification": "Oliy toifali o'qituvchi",
+      "experience": "16 yil",
+      "photo": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80",
+      "email": "b.ergashev@maktab.uz",
+      "awards": [
+        "Xalq ta'limi fidoiysi"
+      ]
+    },
+    {
+      "id": "t3",
+      "name": "Umarova Malika Shavkatovna",
+      "role": "Ma'naviy-ma'rifiy ishlar bo'yicha o'rinbosar",
+      "subject": "Tarix va Huquq",
+      "category": "Gumanitar fanlar",
+      "qualification": "Birinchi toifali o'qituvchi",
+      "experience": "12 yil",
+      "photo": "https://images.unsplash.com/photo-1580894732413-a751516a4032?auto=format&fit=crop&w=800&q=80",
+      "awards": [
+        "Eng yaxshi ma'naviyatchi"
+      ]
+    },
+    {
+      "id": "t4",
+      "name": "Raximov Sardor Dilmurodovich",
+      "role": "Informatika o'qituvchisi",
+      "subject": "Informatika va AKT",
+      "category": "Aniq fanlar",
+      "qualification": "Birinchi toifali",
+      "experience": "8 yil",
+      "photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80",
+      "awards": [
+        "IT Park sertifikati holderi"
+      ]
+    },
+    {
+      "id": "t5",
+      "name": "Toshmatova Nargiza Karimovna",
+      "role": "Ingliz tili o'qituvchisi",
+      "subject": "C1 Sertifikatli Chet tili (Ingliz tili)",
+      "category": "Chet tillari",
+      "qualification": "Oliy toifali",
+      "experience": "10 yil",
+      "photo": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80",
+      "awards": [
+        "IELTS 7.5 sertifikati"
+      ]
+    },
+    {
+      "id": "t6",
+      "name": "Axmedov Otabek Sherzodovich",
+      "role": "Jismoniy tarbiya o'qituvchisi",
+      "subject": "Sport va Jismoniy madaniyat",
+      "category": "Sport",
+      "qualification": "Birinchi toifali",
+      "experience": "14 yil",
+      "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80",
+      "awards": [
+        "Respublika sport ustasi nomzodi"
+      ]
+    }
+  ],
+  "messageList": [
+    {
+      "id": "msg-1",
+      "name": "Sardor Alimov",
+      "phone": "+998 90 123 45 67",
+      "subject": "1-sinfga qabul bo'yicha",
+      "message": "Assalomu alaykum! 2026-2027 o'quv yili uchun 1-sinfga qabul hujjalarini qachondan topshirsa bo'ladi?",
+      "date": "2026-07-20 14:30",
+      "read": false
+    }
+  ]
+}
