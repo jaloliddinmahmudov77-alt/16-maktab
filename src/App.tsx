@@ -452,7 +452,6 @@ export default function App() {
             schoolInfo={schoolInfo}
             newsList={newsList}
             videoList={videoList}
-            photoList={photoList}
             setActiveTab={setActiveTab}
             setSelectedNews={setSelectedNews}
             setSelectedVideo={setSelectedVideo}
@@ -471,7 +470,6 @@ export default function App() {
 
         {activeTab === 'galereya' && (
           <GalleryView
-            photoList={photoList}
             videoList={videoList}
             selectedVideo={selectedVideo}
             setSelectedVideo={setSelectedVideo}
@@ -491,7 +489,6 @@ export default function App() {
           <AdminView
             schoolInfo={schoolInfo}
             newsList={newsList}
-            photoList={photoList}
             videoList={videoList}
             teacherList={teacherList}
             messages={messages}

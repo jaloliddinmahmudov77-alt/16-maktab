@@ -1,5 +1,6 @@
 import React from 'react';
-import { PageTab, SchoolInfo, NewsItem, VideoItem, PhotoItem } from '../types';
+import { PageTab, SchoolInfo, NewsItem, VideoItem } from '../types';
+import { openVideo } from '../utils/videoUtils';
 import { HeroSection } from './HeroSection';
 import {
   Newspaper,
@@ -22,7 +23,6 @@ interface HomeViewProps {
   schoolInfo: SchoolInfo;
   newsList: NewsItem[];
   videoList: VideoItem[];
-  photoList: PhotoItem[];
   setActiveTab: (tab: PageTab) => void;
   setSelectedNews: (news: NewsItem) => void;
   setSelectedVideo: (video: VideoItem) => void;
@@ -32,14 +32,12 @@ export const HomeView: React.FC<HomeViewProps> = ({
   schoolInfo,
   newsList,
   videoList,
-  photoList,
   setActiveTab,
   setSelectedNews,
   setSelectedVideo,
 }) => {
   const featuredNews = newsList.slice(0, 3);
   const recentVideos = videoList.slice(0, 2);
-  const samplePhotos = photoList.slice(0, 4);
 
   return (
     <div id="home-view" className="space-y-16 pb-16">
@@ -236,7 +234,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
           {recentVideos.map((vid) => (
             <div
               key={vid.id}
-              onClick={() => setSelectedVideo(vid)}
+              onClick={() => openVideo(vid, setSelectedVideo)}
               className="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-slate-700 transition-all cursor-pointer group"
             >
               <div className="relative h-60 overflow-hidden bg-slate-950">
@@ -250,9 +248,11 @@ export const HomeView: React.FC<HomeViewProps> = ({
                     <Play className="w-6 h-6 fill-slate-950 ml-1" />
                   </div>
                 </div>
-                <span className="absolute bottom-3 right-3 bg-slate-950/80 text-white text-xs font-mono font-semibold px-2.5 py-1 rounded-md border border-white/10">
-                  {vid.duration}
-                </span>
+                {vid.duration && (
+                  <span className="absolute bottom-3 right-3 bg-slate-950/80 text-white text-xs font-mono font-semibold px-2.5 py-1 rounded-md border border-white/10">
+                    {vid.duration}
+                  </span>
+                )}
               </div>
               <div className="p-5 space-y-2">
                 <h3 className="text-base font-bold text-white group-hover:text-emerald-400 transition-colors line-clamp-1">
@@ -261,48 +261,6 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 <p className="text-xs text-slate-400 line-clamp-2 leading-relaxed">
                   {vid.description}
                 </p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Photo Gallery Grid Preview */}
-      <section id="home-photo-grid" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-        <div className="flex items-end justify-between border-b border-slate-800 pb-4">
-          <div>
-            <div className="flex items-center gap-2 text-indigo-400 text-xs font-semibold uppercase tracking-wider mb-1">
-              <ImageIcon className="w-4 h-4" />
-              <span>Fotolavhalar</span>
-            </div>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
-              Fotogalereya
-            </h2>
-          </div>
-          <button
-            onClick={() => setActiveTab('galereya')}
-            className="text-sm font-semibold text-indigo-400 hover:text-indigo-300 flex items-center gap-1 group"
-          >
-            <span>Fotolarni ko'rish</span>
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </button>
-        </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {samplePhotos.map((photo) => (
-            <div
-              key={photo.id}
-              onClick={() => setActiveTab('galereya')}
-              className="relative h-44 rounded-2xl overflow-hidden border border-slate-800 group cursor-pointer shadow-md"
-            >
-              <img
-                src={photo.url}
-                alt={photo.title}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-3 flex flex-col justify-end">
-                <span className="text-xs font-bold text-white line-clamp-1">{photo.title}</span>
-                <span className="text-[10px] text-emerald-400 font-medium">{photo.category}</span>
               </div>
             </div>
           ))}

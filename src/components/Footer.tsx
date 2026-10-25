@@ -1,7 +1,6 @@
 import React from 'react';
 import { PageTab, SchoolInfo } from '../types';
 import {
-  GraduationCap,
   MapPin,
   Phone,
   Mail,
@@ -35,8 +34,8 @@ export const Footer: React.FC<FooterProps> = ({ schoolInfo, setActiveTab }) => {
           {/* Column 1: Branding & Mission */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white shadow-lg">
-                <GraduationCap className="w-6 h-6" />
+              <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center shadow-lg overflow-hidden">
+                <img src="/logo.png" alt="16-maktab logotipi" className="w-full h-full object-contain" />
               </div>
               <div>
                 <h3 className="text-white font-bold text-lg leading-snug">

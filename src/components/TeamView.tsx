@@ -200,9 +200,11 @@ export const TeamView: React.FC<TeamViewProps> = ({ teacherList }) => {
                             Direktor O'rinbosari
                           </span>
                         )}
-                        <span className="text-[10px] bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 px-2 py-0.5 rounded font-semibold">
-                          {teacher.qualification}
-                        </span>
+                        {teacher.qualification && (
+                          <span className="text-[10px] bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 px-2 py-0.5 rounded font-semibold">
+                            {teacher.qualification}
+                          </span>
+                        )}
                         {teacher.category && !isDir && !isDep && (
                           <span className="text-[10px] bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-2 py-0.5 rounded font-semibold">
                             {teacher.category}
@@ -219,7 +221,9 @@ export const TeamView: React.FC<TeamViewProps> = ({ teacherList }) => {
                   </div>
 
                   {/* FAN NOMI - BOSH O'RINDA KO'RSATILADI */}
+                  {(teacher.subject || teacher.experience) && (
                   <div className="bg-gradient-to-r from-indigo-950/60 to-slate-950 p-3.5 rounded-xl border border-indigo-500/20 space-y-2">
+                    {teacher.subject && (
                     <div className="flex items-start gap-2">
                       <BookOpen className="w-4 h-4 text-indigo-400 shrink-0 mt-0.5" />
                       <div>
@@ -231,11 +235,15 @@ export const TeamView: React.FC<TeamViewProps> = ({ teacherList }) => {
                         </span>
                       </div>
                     </div>
-                    <div className="flex items-center justify-between text-xs pt-1.5 border-t border-slate-800/80">
+                    )}
+                    {teacher.experience && (
+                    <div className={`flex items-center justify-between text-xs ${teacher.subject ? 'pt-1.5 border-t border-slate-800/80' : ''}`}>
                       <span className="text-slate-400">Pedagogik staji:</span>
                       <span className="font-semibold text-emerald-400">{teacher.experience}</span>
                     </div>
+                    )}
                   </div>
+                  )}
 
                   {teacher.awards && teacher.awards.length > 0 && (
                     <div className="flex flex-wrap gap-1.5 pt-1">
@@ -281,9 +289,11 @@ export const TeamView: React.FC<TeamViewProps> = ({ teacherList }) => {
               />
               <div className="space-y-1.5">
                 <div className="flex flex-wrap items-center justify-center sm:justify-start gap-1.5">
-                  <span className="bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 text-xs font-semibold px-2.5 py-0.5 rounded-full inline-block">
-                    {selectedTeacher.qualification}
-                  </span>
+                  {selectedTeacher.qualification && (
+                    <span className="bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 text-xs font-semibold px-2.5 py-0.5 rounded-full inline-block">
+                      {selectedTeacher.qualification}
+                    </span>
+                  )}
                   {selectedTeacher.category && (
                     <span className="bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-xs font-semibold px-2.5 py-0.5 rounded-full inline-block">
                       {selectedTeacher.category}
@@ -296,7 +306,9 @@ export const TeamView: React.FC<TeamViewProps> = ({ teacherList }) => {
             </div>
 
             {/* FAN VA MA'LUMOT BLOKI (Telefon va bio butunlay olib tashlangan) */}
+            {(selectedTeacher.subject || selectedTeacher.category || selectedTeacher.qualification || selectedTeacher.experience || selectedTeacher.email) && (
             <div className="bg-slate-950 p-5 rounded-2xl border border-slate-800 space-y-3.5 text-xs text-slate-300">
+              {selectedTeacher.subject && (
               <div className="flex items-center justify-between border-b border-slate-800/80 pb-2.5">
                 <span className="text-slate-400 flex items-center gap-1.5">
                   <BookOpen className="w-4 h-4 text-indigo-400" />
@@ -304,20 +316,25 @@ export const TeamView: React.FC<TeamViewProps> = ({ teacherList }) => {
                 </span>
                 <span className="font-bold text-white text-sm text-indigo-300">{selectedTeacher.subject}</span>
               </div>
+              )}
               {selectedTeacher.category && (
                 <div className="flex items-center justify-between border-b border-slate-800/80 pb-2.5">
                   <span className="text-slate-400">Yo'nalishi / Turi:</span>
                   <span className="font-bold text-emerald-400">{selectedTeacher.category}</span>
                 </div>
               )}
-              <div className="flex items-center justify-between border-b border-slate-800/80 pb-2.5">
-                <span className="text-slate-400">Pedagogik toifasi:</span>
-                <span className="font-bold text-white">{selectedTeacher.qualification}</span>
-              </div>
-              <div className="flex items-center justify-between border-b border-slate-800/80 pb-2.5">
-                <span className="text-slate-400">Ish tajribasi (Staj):</span>
-                <span className="font-bold text-white">{selectedTeacher.experience}</span>
-              </div>
+              {selectedTeacher.qualification && (
+                <div className="flex items-center justify-between border-b border-slate-800/80 pb-2.5">
+                  <span className="text-slate-400">Pedagogik toifasi:</span>
+                  <span className="font-bold text-white">{selectedTeacher.qualification}</span>
+                </div>
+              )}
+              {selectedTeacher.experience && (
+                <div className="flex items-center justify-between border-b border-slate-800/80 pb-2.5">
+                  <span className="text-slate-400">Ish tajribasi (Staj):</span>
+                  <span className="font-bold text-white">{selectedTeacher.experience}</span>
+                </div>
+              )}
               {selectedTeacher.email && (
                 <div className="flex items-center justify-between">
                   <span className="text-slate-400">Rasmiy elektron pochta:</span>
@@ -325,6 +342,7 @@ export const TeamView: React.FC<TeamViewProps> = ({ teacherList }) => {
                 </div>
               )}
             </div>
+            )}
 
             {selectedTeacher.awards && selectedTeacher.awards.length > 0 && (
               <div className="space-y-2">

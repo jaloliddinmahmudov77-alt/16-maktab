@@ -625,7 +625,7 @@ export const AdminView: React.FC<AdminViewProps> = ({
           }`}
         >
           <Video className="w-4 h-4" />
-          <span>Rasmlar va Videolar ({photoList.length + videoList.length})</span>
+          <span>Videolar ({videoList.length})</span>
         </button>
 
         <button
@@ -944,58 +944,11 @@ export const AdminView: React.FC<AdminViewProps> = ({
         </div>
       )}
 
-      {/* TAB 3: MANAGE PHOTOS AND VIDEOS */}
+      {/* TAB 3: MANAGE VIDEOS */}
       {adminTab === 'media' && (
         <div className="space-y-8">
-          {/* Photos Management */}
-          <div className="space-y-4">
-            <div className="flex items-center justify-between">
-              <h2 className="text-lg font-bold text-white flex items-center gap-2">
-                <ImageIcon className="w-5 h-5 text-indigo-400" />
-                Fotogalereya Boshqaruvi ({photoList.length})
-              </h2>
-              <button
-                onClick={handleOpenCreatePhoto}
-                className="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-3.5 py-2 rounded-xl text-xs flex items-center gap-1.5 transition-all"
-              >
-                <Plus className="w-4 h-4" />
-                <span>Rasm Qo'shish</span>
-              </button>
-            </div>
-
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-              {photoList.map((p) => (
-                <div key={p.id} className="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden relative group hover:border-slate-700 transition-colors">
-                  <img src={p.url} alt={p.title} className="w-full h-32 object-cover bg-slate-800" />
-                  <div className="p-2 text-xs">
-                    <p className="font-bold text-white line-clamp-1">{p.title}</p>
-                    <p className="text-[10px] text-slate-400">{p.category}</p>
-                  </div>
-                  <div className="absolute top-2 right-2 flex items-center gap-1">
-                    <button
-                      type="button"
-                      onClick={() => handleStartEditPhoto(p)}
-                      className="bg-blue-600/90 hover:bg-blue-600 text-white p-1.5 rounded-lg shadow-md transition-all"
-                      title="Tahrirlash"
-                    >
-                      <Edit2 className="w-3.5 h-3.5" />
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => onDeletePhoto(p.id)}
-                      className="bg-rose-600/90 hover:bg-rose-600 text-white p-1.5 rounded-lg shadow-md transition-all"
-                      title="O'chirish"
-                    >
-                      <Trash2 className="w-3.5 h-3.5" />
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
           {/* Videos Management */}
-          <div className="space-y-4 pt-4 border-t border-slate-800">
+          <div className="space-y-4">
             <div className="flex items-center justify-between">
               <h2 className="text-lg font-bold text-white flex items-center gap-2">
                 <Video className="w-5 h-5 text-emerald-400" />
@@ -1399,76 +1352,6 @@ export const AdminView: React.FC<AdminViewProps> = ({
             <button type="submit" className="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3.5 rounded-xl text-xs transition-colors shadow-lg flex items-center justify-center gap-2">
               <Save className="w-4 h-4" />
               <span>{editingNewsId ? "O'zgarishlarni Saqlash" : "Yangilikni Saqlash"}</span>
-            </button>
-          </form>
-        </div>
-      )}
-
-      {/* ADD / EDIT PHOTO MODAL */}
-      {photoModalOpen && (
-        <div className="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4">
-          <form onSubmit={handleSavePhoto} className="bg-slate-900 border border-slate-800 p-6 rounded-3xl max-w-md w-full space-y-4 relative shadow-2xl max-h-[90vh] overflow-y-auto">
-            <button type="button" onClick={() => setPhotoModalOpen(false)} className="absolute top-4 right-4 text-slate-400 hover:text-white">
-              <X className="w-5 h-5" />
-            </button>
-            <h3 className="text-lg font-bold text-white">
-              {editingPhotoId ? "Rasmni Tahrirlash" : "Yangi Rasm Qo'shish"}
-            </h3>
-            
-            <div className="space-y-1">
-              <label className="text-xs font-semibold text-slate-400">Rasm nomi</label>
-              <input
-                type="text"
-                required
-                placeholder="Rasm nomi/sarlavhasi"
-                value={newPhoto.title}
-                onChange={(e) => setNewPhoto({ ...newPhoto, title: e.target.value })}
-                className="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white"
-              />
-            </div>
-
-            <div className="space-y-1">
-              <label className="text-xs font-semibold text-slate-400">Kategoriya</label>
-              <div className="relative">
-                <select
-                  value={newPhoto.category}
-                  onChange={(e) => setNewPhoto({ ...newPhoto, category: e.target.value as any })}
-                  className="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white appearance-none pr-10"
-                >
-                  <option value="Maktab hayoti">Maktab hayoti</option>
-                  <option value="Tadbirlar">Tadbirlar</option>
-                  <option value="Dars jarayoni">Dars jarayoni</option>
-                  <option value="Sport">Sport</option>
-                  <option value="Sinflar">Sinflar</option>
-                </select>
-                <ChevronDown className="w-4 h-4 text-slate-400 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" />
-              </div>
-            </div>
-
-            {/* 2 TA YO'L BILAN RASM YUKLASH: C:/D: DISK YOKI URL */}
-            <MediaUploadInput
-              label="Foto Rasm (C:, D: diskdan yoki URL)"
-              value={newPhoto.url}
-              onChange={(val) => setNewPhoto({ ...newPhoto, url: val })}
-              type="image"
-              placeholder="https://... yoki faylni tanlang"
-              required
-            />
-
-            <div className="space-y-1">
-              <label className="text-xs font-semibold text-slate-400">Qisqacha izoh (ixtiyoriy)</label>
-              <input
-                type="text"
-                placeholder="Rasm haqida qisqacha izoh"
-                value={newPhoto.description}
-                onChange={(e) => setNewPhoto({ ...newPhoto, description: e.target.value })}
-                className="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white"
-              />
-            </div>
-
-            <button type="submit" className="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-3.5 rounded-xl text-xs transition-colors shadow-lg flex items-center justify-center gap-2">
-              <Save className="w-4 h-4" />
-              <span>{editingPhotoId ? "O'zgarishlarni Saqlash" : "Rasmni Saqlash"}</span>
             </button>
           </form>
         </div>

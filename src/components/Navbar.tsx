@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { PageTab, SchoolInfo } from '../types';
 import {
-  GraduationCap,
   Home,
   Info,
   Newspaper,
@@ -34,7 +33,7 @@ export const Navbar: React.FC<NavbarProps> = ({
     { id: 'asosiy', label: 'Asosiy', icon: <Home className="w-4 h-4" /> },
     { id: 'haqida', label: 'Haqida', icon: <Info className="w-4 h-4" /> },
     { id: 'yangiliklar', label: 'Yangiliklar', icon: <Newspaper className="w-4 h-4" /> },
-    { id: 'galereya', label: 'Videolar va Rasmlar', icon: <ImageIcon className="w-4 h-4" /> },
+    { id: 'galereya', label: 'Videolar', icon: <ImageIcon className="w-4 h-4" /> },
     { id: 'jamoa', label: 'Jamoa', icon: <Users className="w-4 h-4" /> },
     { id: 'boglanish', label: 'Bog\'lanish', icon: <PhoneCall className="w-4 h-4" /> },
   ];
@@ -84,7 +83,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           >
             <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-emerald-500 p-0.5 shadow-md group-hover:scale-105 transition-transform">
               <div className="w-full h-full bg-slate-900 rounded-[10px] flex items-center justify-center border border-white/10">
-                <GraduationCap className="w-7 h-7 text-emerald-400" />
+                <img src="/logo.png" alt="16-maktab logotipi" className="w-full h-full object-contain rounded-[10px]" />
               </div>
             </div>
             <div>

@@ -26,11 +26,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ schoolInfo, setActiveT
         <img
           src={schoolInfo.heroBgImage || "https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=2000&q=80"}
           alt="Sardoba 16-maktab binosi orqa foni"
-          className="w-full h-full object-cover object-center transform scale-105 filter brightness-[0.75]"
+          className="w-full h-full object-cover object-center transform scale-105 filter brightness-[0.9]"
         />
         {/* Multilayer gradient dark overlay to ensure readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/85 via-slate-950/80 to-slate-950/95"></div>
-        <div className="absolute inset-0 bg-slate-950/40 backdrop-blur-[1.5px]"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-950/50 to-slate-950/90"></div>
+        <div className="absolute inset-0 bg-slate-950/20"></div>
       </div>
 
       {/* Subtle Ambient Radial Glow */}

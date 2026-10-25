@@ -15,7 +15,7 @@
     "principalTitle": "Maktab direktori",
     "principalMessage": "Xush kelibsiz! Bizning 16-sonli maktabimiz o'quvchilarga chuqur bilim, yuksak ma'naviyat va zamonaviy ko'nikmalarni berishni o'z oldiga bosh maqsad qilib qo'ygan. Har bir farzandimizning kelajakda davlatimiz va jamiyatimizga munosib xizmat qilishi uchun barcha sharoitlar yaratilgan.",
     "principalImage": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80",
-    "heroBgImage": "https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=2000&q=80",
+    "heroBgImage": "/hero.webp",
     "stats": {
       "studentsCount": 480,
       "teachersCount": 38,
@@ -121,114 +121,437 @@
   ],
   "videoList": [
     {
-      "id": "v1",
-      "title": "16-maktab hayotidan lavhalar va targ'ibot roligi",
-      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      "thumbnail": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1000&q=80",
-      "duration": "03:45",
-      "date": "2025-09-01",
-      "description": "Sardoba tumani 16-sonli maktabning tarixi, dars jarayonlari va yutuqlari aks etgan maxsus videolavha."
+      "id": "yt-DqgC3jlpIhM",
+      "date": "2026-10-17",
+      "title": "“ONA TILIM — FAXRIM, G‘URURIM!” CHELLENJI TASHKIL ETILDI",
+      "videoUrl": "https://www.youtube.com/embed/DqgC3jlpIhM",
+      "thumbnail": "https://i.ytimg.com/vi/DqgC3jlpIhM/maxresdefault.jpg",
+      "duration": "",
+      "description": "Joriy yilning 17-oktabr kuni Sardoba tumani Ta’lim va ilm-fan bo‘limi tasarrufidagi 16-umumiy o‘rta ta’lim maktabida o‘zbek tiliga davlat tili maqomi berilgan kun munosabati bilan “Ona tilim — faxrim, g‘ururim!”…"
     },
     {
-      "id": "v2",
-      "title": "Ochiq dars va interaktiv mashg'ulotlar",
-      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      "thumbnail": "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1000&q=80",
-      "duration": "05:12",
-      "date": "2025-10-18",
-      "description": "Matematika va ingilz tili darslarida zamonaviy pedagogik texnologiyalarni qo'llash."
+      "id": "yt-d2K8E8lARGA",
+      "date": "2026-10-14",
+      "title": "📚 «JADIDLAR IZIDAN» KITOBXONLIK KLUBIGA MARHAMAT!",
+      "videoUrl": "https://www.youtube.com/embed/d2K8E8lARGA",
+      "thumbnail": "https://i.ytimg.com/vi/d2K8E8lARGA/maxresdefault.jpg",
+      "duration": "",
+      "description": "Joriy yilning 14-oktabr kuni Sardoba tumani Maktabgacha va maktab ta’limi bo‘limi tasarrufidagi 16-sonli umumiy o‘rta ta’lim maktabida yosh avlodning kitobxonlik madaniyatini yuksaltirish, milliy ma’naviyatimizni…"
     },
     {
-      "id": "v3",
-      "title": "Konstitutsiya kuniga bag'ishlangan bayram konserti",
-      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      "thumbnail": "https://images.unsplash.com/photo-1465847899084-d164df4dedc6?auto=format&fit=crop&w=1000&q=80",
-      "duration": "08:30",
-      "date": "2025-12-07",
-      "description": "O'quvchilar tomonidan tayyorlangan saxna ko'rinishlari va qo'shiqlar."
+      "id": "yt-l9Zm1MYKqKQ",
+      "date": "2026-10-12",
+      "title": "#QizBolaOilaKo‘rki#ErtaNikohningOldiniOlish#XotinQizlar_yig'ilishi",
+      "videoUrl": "https://www.youtube.com/embed/l9Zm1MYKqKQ",
+      "thumbnail": "https://i.ytimg.com/vi/l9Zm1MYKqKQ/maxresdefault.jpg",
+      "duration": "",
+      "description": "Joriy yilning 12-oktabr kuni Sardoba tumani Maktabgacha va maktab ta’limi bo‘limi tasarrufidagi 16-sonli umumiy o‘rta ta’lim maktabida o‘quvchi qizlar ishtirokida “Qiz bola — oila ko‘rki” mavzusida davra suhbati…"
+    },
+    {
+      "id": "yt--W9MdgngMkI",
+      "date": "2026-10-12",
+      "title": "📚 “KELAJAK SOATI” — USTOZGA EHTIROM, KELAJAKKA HURMAT!",
+      "videoUrl": "https://www.youtube.com/embed/-W9MdgngMkI",
+      "thumbnail": "https://i.ytimg.com/vi/-W9MdgngMkI/maxresdefault.jpg",
+      "duration": "",
+      "description": "Joriy yilning 12-oktabr kuni Sardoba tumani Maktabgacha va maktab ta’limi bo‘limi tasarrufidagi 16-sonli umumiy o‘rta ta’lim maktabida  navbatdagi “Kelajak soati” mashg‘ulotlari o‘tkaziladi."
+    },
+    {
+      "id": "yt-lLQrZ-qoNSo",
+      "date": "2026-10-10",
+      "title": "#KelajakMarkazlari#MaktabMaslahatchilari",
+      "videoUrl": "https://www.youtube.com/embed/lLQrZ-qoNSo",
+      "thumbnail": "https://i.ytimg.com/vi/lLQrZ-qoNSo/maxresdefault.jpg",
+      "duration": "",
+      "description": "📚 MAKTAB MASLAHATCHILARI FAOLIYATINI TAKOMILLASHTIRISHGA QARATILGAN AMALIY SEMINAR📍Joriy yilning 10-oktabr kuni Sardoba tumani Maktabgacha va maktab ta’limi bo‘limi tasarrufidagi 16-sonli umumiy o‘rta ta’lim…"
+    },
+    {
+      "id": "yt-NvGqFoGYChg",
+      "date": "2026-10-09",
+      "title": "Milliy liboslar kuni",
+      "videoUrl": "https://www.youtube.com/embed/NvGqFoGYChg",
+      "thumbnail": "https://i.ytimg.com/vi/NvGqFoGYChg/maxresdefault.jpg",
+      "duration": "",
+      "description": "Joriy yilning 9-oktabr kuni maktabimizda “Milliy liboslar kuni” munosabati bilan barcha o‘qituvchi va o‘quvchilar milliy liboslarda dars mashg‘ulotlarida ishtirok etdilar. Ushbu tashabbus milliy qadriyatlarimiz,…"
+    },
+    {
+      "id": "yt-4-YcRaGAnYw",
+      "date": "2026-09-24",
+      "title": "Ustozlar va murabbiylar kuniga chellenj",
+      "videoUrl": "https://www.youtube.com/embed/4-YcRaGAnYw",
+      "thumbnail": "https://i.ytimg.com/vi/4-YcRaGAnYw/maxresdefault.jpg",
+      "duration": "",
+      "description": "🌟 USTOZ VA MURABBIYLAR — KELAJAK BUNYODKORLARI! 🌟"
+    },
+    {
+      "id": "yt-CJjsBVo6egs",
+      "date": "2026-09-14",
+      "title": "3-hafta kelajak soati",
+      "videoUrl": "https://www.youtube.com/embed/CJjsBVo6egs",
+      "thumbnail": "https://i.ytimg.com/vi/CJjsBVo6egs/maxresdefault.jpg",
+      "duration": "",
+      "description": "Joriy yilning14-sentabr kuni Sardoba tumani Maktabgacha va maktab ta’limi bo‘limi tasarrufidagi 16-sonli umumiy o‘rta ta’lim maktabida 2026–2027-o‘quv yilining 3-haftasi doirasida o'quvchilar  uchun 1-4 -sinflarda…"
+    },
+    {
+      "id": "yt-xJQEWroKLE4",
+      "date": "2026-09-14",
+      "title": "2026–2027-O‘QUV YILINING ILK KUNI",
+      "videoUrl": "https://www.youtube.com/embed/xJQEWroKLE4",
+      "thumbnail": "https://i.ytimg.com/vi/xJQEWroKLE4/maxresdefault.jpg",
+      "duration": "",
+      "description": "🏫 SARDОBA TUMANI MAKTABGACHA VA MAKTAB TA’LIMI BO‘LIMI TASARRUFIDAGI  16-SONLI UMUMIY O‘RTA TA’LIM MAKTABIDA"
     }
   ],
   "teacherList": [
     {
-      "id": "t1",
-      "name": "Qodirova Zulfiya Abdullayevna",
+      "id": "team-20",
+      "name": "Fayzullayev Bobomurod ",
       "role": "Maktab direktori",
-      "subject": "O'zbek tili va adabiyoti",
+      "subject": "Direktor",
+      "qualification": "",
+      "experience": "10 Yil",
+      "photo": "/team/20.jpg",
       "category": "Rahbariyat",
-      "qualification": "Oliy toifali o'qituvchi",
-      "experience": "22 yil",
-      "photo": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80",
-      "email": "z.qodirova@maktab.uz",
-      "awards": [
-        "Xalq ta'limi a'lochisi ko'krak nishoni",
-        "Tuman yil o'qituvchisi-2023"
-      ]
+      "awards": []
     },
     {
-      "id": "t2",
-      "name": "Ergashev Bobur Rustamovich",
-      "role": "O'quv ishlari bo'yicha o'rinbosar",
-      "subject": "Matematika va Informatika",
-      "category": "Aniq fanlar",
-      "qualification": "Oliy toifali o'qituvchi",
-      "experience": "16 yil",
-      "photo": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80",
-      "email": "b.ergashev@maktab.uz",
-      "awards": [
-        "Xalq ta'limi fidoiysi"
-      ]
+      "id": "team-29",
+      "name": "Abdullayev Abdumalik",
+      "role": "Direktor O'rinbosari",
+      "subject": "Direktor O'rinbosari",
+      "qualification": "",
+      "experience": "10 Yil",
+      "photo": "/team/29.jpg",
+      "category": "Rahbariyat",
+      "awards": []
     },
     {
-      "id": "t3",
-      "name": "Umarova Malika Shavkatovna",
-      "role": "Ma'naviy-ma'rifiy ishlar bo'yicha o'rinbosar",
-      "subject": "Tarix va Huquq",
-      "category": "Gumanitar fanlar",
-      "qualification": "Birinchi toifali o'qituvchi",
-      "experience": "12 yil",
-      "photo": "https://images.unsplash.com/photo-1580894732413-a751516a4032?auto=format&fit=crop&w=800&q=80",
-      "awards": [
-        "Eng yaxshi ma'naviyatchi"
-      ]
+      "id": "team-15",
+      "name": "Zulpiqarov Jaloliddin",
+      "role": "Direktor O'rinbosari",
+      "subject": "Direktor O'rinbosari",
+      "qualification": "",
+      "experience": "10 Yil",
+      "photo": "/team/15.jpg",
+      "category": "Rahbariyat",
+      "awards": []
     },
     {
-      "id": "t4",
-      "name": "Raximov Sardor Dilmurodovich",
-      "role": "Informatika o'qituvchisi",
-      "subject": "Informatika va AKT",
-      "category": "Aniq fanlar",
-      "qualification": "Birinchi toifali",
-      "experience": "8 yil",
-      "photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80",
-      "awards": [
-        "IT Park sertifikati holderi"
-      ]
+      "id": "team-4",
+      "name": "Bakirova Ro'zigul",
+      "role": "Maktab Maslahatchisi",
+      "subject": "Maktab Maslahatchisi",
+      "qualification": "",
+      "experience": "10 Yil",
+      "photo": "/team/4.jpg",
+      "category": "Rahbariyat",
+      "awards": []
     },
     {
-      "id": "t5",
-      "name": "Toshmatova Nargiza Karimovna",
-      "role": "Ingliz tili o'qituvchisi",
-      "subject": "C1 Sertifikatli Chet tili (Ingliz tili)",
-      "category": "Chet tillari",
-      "qualification": "Oliy toifali",
+      "id": "team-26",
+      "name": "Saidmuradova Sanobar",
+      "role": "O'qituvchi",
+      "subject": "Kutubxona mudirasi",
+      "qualification": "",
+      "experience": "10 Yil",
+      "photo": "/team/26.jpg",
+      "category": "Rahbariyat",
+      "awards": []
+    },
+    {
+      "id": "team-1",
+      "name": "Yaxshilikova Oltinoy",
+      "role": "O'qituvchi",
+      "subject": "Tasviriy san'at va chizmachilik",
+      "qualification": "",
       "experience": "10 yil",
-      "photo": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80",
-      "awards": [
-        "IELTS 7.5 sertifikati"
-      ]
+      "photo": "/team/1.jpg",
+      "category": "Aniq fanlar",
+      "awards": []
     },
     {
-      "id": "t6",
-      "name": "Axmedov Otabek Sherzodovich",
-      "role": "Jismoniy tarbiya o'qituvchisi",
-      "subject": "Sport va Jismoniy madaniyat",
+      "id": "team-2",
+      "name": "Tangirova Oysara",
+      "role": "O'qituvchi",
+      "subject": "Ona tili va adabiyot",
+      "qualification": "",
+      "experience": "10 Yil",
+      "photo": "/team/2.jpg",
+      "category": "Gumanitar fanlar",
+      "awards": []
+    },
+    {
+      "id": "team-3",
+      "name": "Karimova Ra'no",
+      "role": "O'qituvchi",
+      "subject": "Rus tili",
+      "qualification": "",
+      "experience": "10 Yil",
+      "photo": "/team/3.jpg",
+      "category": "Chet tillari",
+      "awards": []
+    },
+    {
+      "id": "team-5",
+      "name": "Juvoshova Mavjuda",
+      "role": "O'qituvchi",
+      "subject": "Boshlang'ich ta'lim",
+      "qualification": "",
+      "experience": "10 Yil",
+      "photo": "/team/5.jpg",
+      "category": "Boshlang'ich",
+      "awards": []
+    },
+    {
+      "id": "team-6",
+      "name": "Yaxshilikova Nafisa",
+      "role": "O'qituvchi",
+      "subject": "Matematika",
+      "qualification": "",
+      "experience": "10 Yil",
+      "photo": "/team/6.jpg",
+      "category": "Aniq fanlar",
+      "awards": []
+    },
+    {
+      "id": "team-7",
+      "name": "Dusanova Nafisa",
+      "role": "O'qituvchi",
+      "subject": "Ingliz tili",
+      "qualification": "",
+      "experience": "10 Yil",
+      "photo": "/team/7.jpg",
+      "category": "Chet tillari",
+      "awards": []
+    },
+    {
+      "id": "team-8",
+      "name": "Janibekov Odil",
+      "role": "O'qituvchi",
+      "subject": "Informatika va AKT",
+      "qualification": "",
+      "experience": "",
+      "photo": "/team/8.jpg",
+      "category": "Aniq fanlar",
+      "awards": []
+    },
+    {
+      "id": "team-9",
+      "name": "Turg'unboyev Davron",
+      "role": "O'qituvchi",
+      "subject": "Jismoniy tarbiya (Sport)",
+      "qualification": "",
+      "experience": "",
+      "photo": "/team/9.jpg",
       "category": "Sport",
-      "qualification": "Birinchi toifali",
-      "experience": "14 yil",
-      "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80",
-      "awards": [
-        "Respublika sport ustasi nomzodi"
-      ]
+      "awards": []
+    },
+    {
+      "id": "team-10",
+      "name": "Altmishova Dilorom",
+      "role": "O'qituvchi",
+      "subject": "Ona tili va adabiyot",
+      "qualification": "",
+      "experience": "10 Yil",
+      "photo": "/team/10.jpg",
+      "category": "Gumanitar fanlar",
+      "awards": []
+    },
+    {
+      "id": "team-11",
+      "name": "Umrzoqova Dinara",
+      "role": "O'qituvchi",
+      "subject": "Ona tili va adabiyot",
+      "qualification": "",
+      "experience": "10 Yil",
+      "photo": "/team/11.jpg",
+      "category": "Gumanitar fanlar",
+      "awards": []
+    },
+    {
+      "id": "team-12",
+      "name": "Ismoilov Goffor",
+      "role": "O'qituvchi",
+      "subject": "CHQBT",
+      "qualification": "",
+      "experience": "10 Yil",
+      "photo": "/team/12.jpg",
+      "category": "Sport",
+      "awards": []
+    },
+    {
+      "id": "team-14",
+      "name": "Cho'tanova Gulnoza",
+      "role": "O'qituvchi",
+      "subject": "Boshlang'ich ta'lim",
+      "qualification": "",
+      "experience": "10 Yil",
+      "photo": "/team/14.jpg",
+      "category": "Boshlang'ich",
+      "awards": []
+    },
+    {
+      "id": "team-16",
+      "name": "Qo'chqorov Jo'raboy ",
+      "role": "O'qituvchi",
+      "subject": "Informatika va AKT",
+      "qualification": "",
+      "experience": "10 Yil",
+      "photo": "/team/16.jpg",
+      "category": "Aniq fanlar",
+      "awards": []
+    },
+    {
+      "id": "team-17",
+      "name": "Ismoilova Malika",
+      "role": "O'qituvchi",
+      "subject": "Ingliz tili",
+      "qualification": "",
+      "experience": "10 Yil",
+      "photo": "/team/17.jpg",
+      "category": "Chet tillari",
+      "awards": []
+    },
+    {
+      "id": "team-18",
+      "name": "Berdiyorova Aziza",
+      "role": "O'qituvchi",
+      "subject": "Boshlang'ich ta'lim",
+      "qualification": "",
+      "experience": "10 Yil",
+      "photo": "/team/18.jpg",
+      "category": "Boshlang'ich",
+      "awards": []
+    },
+    {
+      "id": "team-19",
+      "name": "Ismatov Begzod",
+      "role": "O'qituvchi",
+      "subject": "Tarix",
+      "qualification": "",
+      "experience": "10 Yil",
+      "photo": "/team/19.jpg",
+      "category": "Gumanitar fanlar",
+      "awards": []
+    },
+    {
+      "id": "team-21",
+      "name": "O'risheva Hayri",
+      "role": "O'qituvchi",
+      "subject": "Boshlang'ich ta'lim",
+      "qualification": "",
+      "experience": "",
+      "photo": "/team/21.jpg",
+      "category": "Boshlang'ich",
+      "awards": []
+    },
+    {
+      "id": "team-22",
+      "name": "Suyarov Ziyodulla",
+      "role": "O'qituvchi",
+      "subject": "Jismoniy tarbiya (Sport)",
+      "qualification": "",
+      "experience": "10 Yil",
+      "photo": "/team/22.jpg",
+      "category": "Sport",
+      "awards": []
+    },
+    {
+      "id": "team-23",
+      "name": "Pardaboyeva Umida",
+      "role": "O'qituvchi",
+      "subject": "Boshlang'ich ta'lim",
+      "qualification": "",
+      "experience": "10 Yil",
+      "photo": "/team/23.jpg",
+      "category": "Boshlang'ich",
+      "awards": []
+    },
+    {
+      "id": "team-24",
+      "name": "Oqnazarov Shaxzod",
+      "role": "O'qituvchi",
+      "subject": "Matematika",
+      "qualification": "",
+      "experience": "10 Yil",
+      "photo": "/team/24.jpg",
+      "category": "Aniq fanlar",
+      "awards": []
+    },
+    {
+      "id": "team-25",
+      "name": "Pardaboyev Sardor",
+      "role": "O'qituvchi",
+      "subject": "Matematika",
+      "qualification": "",
+      "experience": "10 Yil",
+      "photo": "/team/25.jpg",
+      "category": "Aniq fanlar",
+      "awards": []
+    },
+    {
+      "id": "team-27",
+      "name": "Yalg‘ashev Rustambek",
+      "role": "O'qituvchi",
+      "subject": "Fizika",
+      "qualification": "",
+      "experience": "10 Yil",
+      "photo": "/team/27.jpg",
+      "category": "Aniq fanlar",
+      "awards": []
+    },
+    {
+      "id": "team-28",
+      "name": "Qo'chqorov Ahmad",
+      "role": "O'qituvchi",
+      "subject": "Pisixolog",
+      "qualification": "",
+      "experience": "10 Yil",
+      "photo": "/team/28.jpg",
+      "category": "Tabiiy fanlar",
+      "awards": []
+    },
+    {
+      "id": "team-30",
+      "name": "Mahmudov Jasurbek",
+      "role": "O'qituvchi",
+      "subject": "Ingliz tili",
+      "qualification": "",
+      "experience": "10 Yil",
+      "photo": "/team/30.webp",
+      "category": "Chet tillari",
+      "awards": []
+    },
+    {
+      "id": "team-31",
+      "name": "Mahmudov Jafar",
+      "role": "O'qituvchi",
+      "subject": "Jismoniy tarbiya (Sport)",
+      "qualification": "",
+      "experience": "10 Yil",
+      "photo": "/team/31.webp",
+      "category": "Sport",
+      "awards": []
+    },
+    {
+      "id": "team-32",
+      "name": "Jonboyeva Dilafruz",
+      "role": "O'qituvchi",
+      "subject": "Kimyo",
+      "qualification": "",
+      "experience": "10 Yil",
+      "photo": "/team/32.jpg",
+      "category": "Aniq fanlar",
+      "awards": []
+    },
+    {
+      "id": "team-33",
+      "name": "Jamoa a'zosi 33",
+      "role": "O'qituvchi",
+      "subject": "",
+      "qualification": "",
+      "experience": "",
+      "photo": "/team/33.jpg"
     }
   ],
   "messageList": [
@@ -239,7 +562,7 @@
       "subject": "1-sinfga qabul bo'yicha",
       "message": "Assalomu alaykum! 2026-2027 o'quv yili uchun 1-sinfga qabul hujjalarini qachondan topshirsa bo'ladi?",
       "date": "2026-07-20 14:30",
-      "read": false
+      "read": true
     }
   ]
 }
