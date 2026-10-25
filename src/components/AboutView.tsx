@@ -124,7 +124,7 @@ export const AboutView: React.FC<AboutViewProps> = ({ schoolInfo }) => {
             <img
               src={schoolInfo.principalImage}
               alt={schoolInfo.principalName}
-              className="w-36 h-36 rounded-2xl object-cover border-4 border-blue-500/40 shadow-xl"
+              className="w-36 h-36 rounded-2xl object-cover object-[50%_25%] border-4 border-blue-500/40 shadow-xl"
             />
             <div>
               <h3 className="text-lg font-bold text-white">{schoolInfo.principalName}</h3>

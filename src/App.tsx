@@ -26,47 +26,34 @@ import { ContactView } from './components/ContactView';
 import { AdminView } from './components/AdminView';
 import { sortTeachersDirectorFirst } from './utils/teacherUtils';
 
+// Bundled data fingerprint: when a new deploy ships different initial data,
+// caches saved by an older deploy are ignored so visitors see the new content.
+const DATA_VERSION = (() => {
+  const str = JSON.stringify([initialSchoolInfo, initialNews, initialPhotos, initialVideos, initialTeachers]);
+  let h = 0;
+  for (let i = 0; i < str.length; i++) h = (Math.imul(31, h) + str.charCodeAt(i)) | 0;
+  return String(h);
+})();
+
+function readCache<T>(key: string): T | null {
+  try {
+    if (localStorage.getItem('sardoba16_dataVersion') !== DATA_VERSION) return null;
+    const saved = localStorage.getItem(key);
+    return saved ? JSON.parse(saved) : null;
+  } catch {
+    return null;
+  }
+}
+
 export default function App() {
   const [activeTab, setActiveTab] = useState<PageTab>('asosiy');
-  const [schoolInfo, setSchoolInfo] = useState<SchoolInfo>(() => {
-    try {
-      const saved = localStorage.getItem('sardoba16_schoolInfo');
-      if (saved) return JSON.parse(saved);
-    } catch {}
-    return initialSchoolInfo;
-  });
-  const [newsList, setNewsList] = useState<NewsItem[]>(() => {
-    try {
-      const saved = localStorage.getItem('sardoba16_newsList');
-      if (saved) return JSON.parse(saved);
-    } catch {}
-    return initialNews;
-  });
-  const [photoList, setPhotoList] = useState<PhotoItem[]>(() => {
-    try {
-      const saved = localStorage.getItem('sardoba16_photoList');
-      if (saved) return JSON.parse(saved);
-    } catch {}
-    return initialPhotos;
-  });
-  const [videoList, setVideoList] = useState<VideoItem[]>(() => {
-    try {
-      const saved = localStorage.getItem('sardoba16_videoList');
-      if (saved) return JSON.parse(saved);
-    } catch {}
-    return initialVideos;
-  });
+  const [schoolInfo, setSchoolInfo] = useState<SchoolInfo>(() => readCache('sardoba16_schoolInfo') ?? initialSchoolInfo);
+  const [newsList, setNewsList] = useState<NewsItem[]>(() => readCache('sardoba16_newsList') ?? initialNews);
+  const [photoList, setPhotoList] = useState<PhotoItem[]>(() => readCache('sardoba16_photoList') ?? initialPhotos);
+  const [videoList, setVideoList] = useState<VideoItem[]>(() => readCache('sardoba16_videoList') ?? initialVideos);
   const [teacherList, setTeacherList] = useState<TeacherItem[]>(() => {
-    try {
-      const saved = localStorage.getItem('sardoba16_teacherList');
-      if (saved) {
-        const parsed = JSON.parse(saved);
-        if (Array.isArray(parsed) && parsed.length > 0) {
-          return sortTeachersDirectorFirst(parsed);
-        }
-      }
-    } catch {}
-    return sortTeachersDirectorFirst(initialTeachers);
+    const cached = readCache<TeacherItem[]>('sardoba16_teacherList');
+    return sortTeachersDirectorFirst(Array.isArray(cached) && cached.length > 0 ? cached : initialTeachers);
   });
   const [messages, setMessages] = useState<ContactMessage[]>([]);
 
@@ -74,6 +61,11 @@ export default function App() {
   const [selectedVideo, setSelectedVideo] = useState<VideoItem | null>(null);
 
   // Sync to localStorage for immediate resilience
+  useEffect(() => {
+    try {
+      localStorage.setItem('sardoba16_dataVersion', DATA_VERSION);
+    } catch {}
+  }, []);
   useEffect(() => {
     try {
       localStorage.setItem('sardoba16_schoolInfo', JSON.stringify(schoolInfo));

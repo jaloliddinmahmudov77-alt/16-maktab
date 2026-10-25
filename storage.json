@@ -11,10 +11,10 @@
     "email": "sardoba16maktab@umail.uz",
     "workHours": "Dushanba - Shanba: 08:00 - 17:00",
     "activityType": "Umumiy oʻrta taʼlim berish. Maktab ijtimoiy muassasa hisoblanadi.",
-    "principalName": "Qodirova Zulfiya Abdullayevna",
+    "principalName": "Fayzullayev Bobomurod",
     "principalTitle": "Maktab direktori",
     "principalMessage": "Xush kelibsiz! Bizning 16-sonli maktabimiz o'quvchilarga chuqur bilim, yuksak ma'naviyat va zamonaviy ko'nikmalarni berishni o'z oldiga bosh maqsad qilib qo'ygan. Har bir farzandimizning kelajakda davlatimiz va jamiyatimizga munosib xizmat qilishi uchun barcha sharoitlar yaratilgan.",
-    "principalImage": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80",
+    "principalImage": "/team/20.jpg",
     "heroBgImage": "/hero.webp",
     "stats": {
       "studentsCount": 480,
@@ -205,7 +205,7 @@
   "teacherList": [
     {
       "id": "team-20",
-      "name": "Fayzullayev Bobomurod ",
+      "name": "Fayzullayev Bobomurod",
       "role": "Maktab direktori",
       "subject": "Direktor",
       "qualification": "",

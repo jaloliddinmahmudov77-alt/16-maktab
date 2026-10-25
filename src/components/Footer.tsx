@@ -93,7 +93,7 @@ export const Footer: React.FC<FooterProps> = ({ schoolInfo, setActiveTab }) => {
                 { id: 'asosiy', label: 'Asosiy Sahifa' },
                 { id: 'haqida', label: 'Maktab Haqida va AI' },
                 { id: 'yangiliklar', label: 'Maktab Yangiliklari' },
-                { id: 'galereya', label: 'Rasmlar va Videolar' },
+                { id: 'galereya', label: 'Videolar' },
                 { id: 'jamoa', label: 'O\'qituvchilar va Jamoa' },
                 { id: 'boglanish', label: 'Bog\'lanish va Manzil' },
               ].map((link) => (
