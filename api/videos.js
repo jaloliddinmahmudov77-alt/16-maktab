@@ -39,13 +39,18 @@ export function parseFeed(xml) {
     });
 }
 
+export async function fetchChannelVideos() {
+  const feed = await fetch(`https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_ID}`);
+  if (!feed.ok) throw new Error('feed ' + feed.status);
+  const videos = parseFeed(await feed.text());
+  if (videos.length === 0) throw new Error("feed bo'sh");
+  return videos;
+}
+
 export default async function handler(req, res) {
   if (req.method !== 'GET') return res.status(405).json({ error: 'Faqat GET' });
   try {
-    const feed = await fetch(`https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_ID}`);
-    if (!feed.ok) throw new Error('feed ' + feed.status);
-    const videos = parseFeed(await feed.text());
-    if (videos.length === 0) throw new Error('feed bo\'sh');
+    const videos = await fetchChannelVideos();
     res.setHeader('Cache-Control', 's-maxage=900, stale-while-revalidate=3600');
     return res.status(200).json(videos);
   } catch (err) {

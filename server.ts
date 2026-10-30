@@ -3,6 +3,7 @@ import path from "path";
 import fs from "fs";
 import { createServer as createViteServer } from "vite";
 import { GoogleGenAI } from "@google/genai";
+import { fetchChannelVideos } from "./api/videos.js";
 import {
   initialSchoolInfo,
   initialNews,
@@ -158,7 +159,7 @@ function loadStorage(): StorageData {
 
 async function startServer() {
   const app = express();
-  const PORT = 3000;
+  const PORT = Number(process.env.PORT) || 3000;
 
   app.use(express.json({ limit: "50mb" }));
   app.use(express.urlencoded({ limit: "50mb", extended: true }));
@@ -336,7 +337,20 @@ JAVOB BERISH QOIDALARI:
   });
 
   // Videos CRUD
-  app.get("/api/videos", (req, res) => res.json(videoList));
+  // Same source as the Vercel function; stored list is the fallback when YouTube is unreachable
+  let channelVideos: VideoItem[] | null = null;
+  let channelVideosAt = 0;
+  app.get("/api/videos", async (req, res) => {
+    if (!channelVideos || Date.now() - channelVideosAt > 15 * 60 * 1000) {
+      try {
+        channelVideos = await fetchChannelVideos();
+        channelVideosAt = Date.now();
+      } catch (err) {
+        console.error("YouTube feed error:", err);
+      }
+    }
+    res.json(channelVideos ?? videoList);
+  });
   app.post("/api/videos", (req, res) => {
     const newVideo: VideoItem = {
       id: "v-" + Date.now(),
