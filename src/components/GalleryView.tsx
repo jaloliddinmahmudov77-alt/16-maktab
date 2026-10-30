@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { VideoItem } from '../types';
-import { openVideo } from '../utils/videoUtils';
+import { schoolPhotos } from '../data/initialData';
+import { getYouTubeWatchUrl, openVideo } from '../utils/videoUtils';
 import {
   Image as ImageIcon,
   Video,
@@ -23,6 +24,8 @@ export const GalleryView: React.FC<GalleryViewProps> = ({
   selectedVideo,
   setSelectedVideo,
 }) => {
+  const [selectedPhoto, setSelectedPhoto] = useState<(typeof schoolPhotos)[number] | null>(null);
+
   return (
     <div id="gallery-view" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
       {/* Title Header */}
@@ -32,10 +35,10 @@ export const GalleryView: React.FC<GalleryViewProps> = ({
           Media Galereya
         </span>
         <h1 className="text-3xl sm:text-4xl font-extrabold text-white">
-          Maktab Hayotidan Videolar
+          Maktab Hayotidan Videolar va Rasmlar
         </h1>
         <p className="text-slate-300 text-sm sm:text-base">
-          16-sonli maktabimizdagi tadbirlar, o'quv jarayonlari va maktab hayotidan video lavhalar.
+          16-sonli maktabimizdagi tadbirlar, o'quv jarayonlari va maktab hayotidan video hamda foto lavhalar.
         </p>
       </div>
 
@@ -90,6 +93,50 @@ export const GalleryView: React.FC<GalleryViewProps> = ({
         </div>
       )}
 
+      {/* SCHOOL PHOTOS */}
+      <section id="gallery-photos" className="space-y-6">
+        <h2 className="text-2xl font-extrabold text-white flex items-center gap-2">
+          <ImageIcon className="w-6 h-6 text-emerald-400" />
+          Fotosuratlar
+        </h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {schoolPhotos.map((photo) => (
+            <div
+              key={photo.id}
+              onClick={() => setSelectedPhoto(photo)}
+              className="relative h-44 rounded-2xl overflow-hidden border border-slate-800 group cursor-pointer shadow-md"
+            >
+              <img src={photo.url} alt={photo.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/90 to-transparent p-3 pt-8">
+                <span className="text-xs font-bold text-white line-clamp-1">{photo.title}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* PHOTO LIGHTBOX */}
+      {selectedPhoto && (
+        <div
+          onClick={() => setSelectedPhoto(null)}
+          className="fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-md flex items-center justify-center p-4"
+        >
+          <div onClick={(e) => e.stopPropagation()} className="bg-slate-900 border border-slate-800 rounded-3xl max-w-4xl w-full overflow-hidden shadow-2xl relative">
+            <button
+              onClick={() => setSelectedPhoto(null)}
+              className="absolute top-4 right-4 z-10 w-10 h-10 bg-slate-950/80 hover:bg-slate-800 text-white rounded-full flex items-center justify-center border border-white/10 transition-colors"
+            >
+              <X className="w-5 h-5" />
+            </button>
+            <img src={selectedPhoto.url} alt={selectedPhoto.title} className="w-full max-h-[70vh] object-contain bg-slate-950" />
+            <div className="p-6 space-y-2">
+              <h2 className="text-xl font-bold text-white">{selectedPhoto.title}</h2>
+              <p className="text-sm text-slate-300 leading-relaxed">{selectedPhoto.description}</p>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* VIDEO PLAYER MODAL */}
       {selectedVideo && (
         <div className="fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-md flex items-center justify-center p-4">
@@ -103,13 +150,25 @@ export const GalleryView: React.FC<GalleryViewProps> = ({
 
             {/* Video Frame */}
             <div className="relative aspect-video bg-slate-950">
-              <iframe
-                src={`${selectedVideo.videoUrl}?autoplay=1`}
-                title={selectedVideo.title}
-                className="w-full h-full border-0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
+              {getYouTubeWatchUrl(selectedVideo.videoUrl) ? (
+                <iframe
+                  src={`${selectedVideo.videoUrl}?autoplay=1`}
+                  title={selectedVideo.title}
+                  className="w-full h-full border-0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              ) : (
+                <video
+                  src={selectedVideo.videoUrl}
+                  poster={selectedVideo.thumbnail}
+                  title={selectedVideo.title}
+                  className="w-full h-full"
+                  controls
+                  autoPlay
+                  playsInline
+                />
+              )}
             </div>
 
             <div className="p-6 space-y-2">

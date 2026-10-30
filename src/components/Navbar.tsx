@@ -33,7 +33,7 @@ export const Navbar: React.FC<NavbarProps> = ({
     { id: 'asosiy', label: 'Asosiy', icon: <Home className="w-4 h-4" /> },
     { id: 'haqida', label: 'Haqida', icon: <Info className="w-4 h-4" /> },
     { id: 'yangiliklar', label: 'Yangiliklar', icon: <Newspaper className="w-4 h-4" /> },
-    { id: 'galereya', label: 'Videolar', icon: <ImageIcon className="w-4 h-4" /> },
+    { id: 'galereya', label: 'Videolar va Rasmlar', icon: <ImageIcon className="w-4 h-4" /> },
     { id: 'jamoa', label: 'Jamoa', icon: <Users className="w-4 h-4" /> },
     { id: 'boglanish', label: 'Bog\'lanish', icon: <PhoneCall className="w-4 h-4" /> },
   ];

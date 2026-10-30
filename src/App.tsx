@@ -14,6 +14,7 @@ import {
   initialPhotos,
   initialVideos,
   initialTeachers,
+  schoolTourVideo,
 } from './data/initialData';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
@@ -59,6 +60,7 @@ export default function App() {
 
   const [selectedNews, setSelectedNews] = useState<NewsItem | null>(null);
   const [selectedVideo, setSelectedVideo] = useState<VideoItem | null>(null);
+  const shownVideos = [schoolTourVideo, ...videoList.filter((v) => v.id !== schoolTourVideo.id)];
 
   // Sync to localStorage for immediate resilience
   useEffect(() => {
@@ -443,10 +445,13 @@ export default function App() {
           <HomeView
             schoolInfo={schoolInfo}
             newsList={newsList}
-            videoList={videoList}
+            videoList={shownVideos}
             setActiveTab={setActiveTab}
             setSelectedNews={setSelectedNews}
-            setSelectedVideo={setSelectedVideo}
+            setSelectedVideo={(video) => {
+              setSelectedVideo(video);
+              setActiveTab('galereya');
+            }}
           />
         )}
 
@@ -462,7 +467,7 @@ export default function App() {
 
         {activeTab === 'galereya' && (
           <GalleryView
-            videoList={videoList}
+            videoList={shownVideos}
             selectedVideo={selectedVideo}
             setSelectedVideo={setSelectedVideo}
           />

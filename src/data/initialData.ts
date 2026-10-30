@@ -123,6 +123,33 @@ export const initialPhotos: PhotoItem[] = [
   }
 ];
 
+// School tour: always shown first, next to the videos coming from YouTube
+export const schoolTourVideo: VideoItem = {
+  id: "school-tour",
+  title: "16-maktab bo'ylab sayohat",
+  videoUrl: "/tour/maktab.mp4",
+  thumbnail: "/tour/poster.jpg",
+  duration: "00:26",
+  date: "2026-10-29",
+  description: "Maktabimiz binosi, sinfxonalar, kutubxona, sport zali va maydonlari bilan tanishing."
+};
+
+// Stills taken from the school tour video
+export const schoolPhotos: { id: string; title: string; description: string; url: string }[] = [
+  { id: "gallery-1", title: "Maktab binosi", description: "Sardoba tumani 16-maktabning asosiy binosi.", url: "/gallery/1.jpg" },
+  { id: "gallery-2", title: "Maktab hovlisi", description: "Kuzgi maktab hovlisi va bino ko'rinishi.", url: "/gallery/2.jpg" },
+  { id: "gallery-3", title: "Ochiq sport maydonchasi", description: "Maktab hududidagi ochiq sport maydonchasi.", url: "/gallery/3.jpg" },
+  { id: "gallery-4", title: "Dars jarayoni", description: "Boshlang'ich sinf o'quvchilari dars jarayonida.", url: "/gallery/4.jpg" },
+  { id: "gallery-5", title: "Kutubxona", description: "Maktab kutubxonasi va kitob javonlari.", url: "/gallery/5.jpg" },
+  { id: "gallery-6", title: "Axborot-resurs markazi", description: "Kompyuterlar bilan jihozlangan kutubxona xonasi.", url: "/gallery/6.jpg" },
+  { id: "gallery-7", title: "Majlislar zali", description: "Tadbirlar va yig'ilishlar o'tkaziladigan zal.", url: "/gallery/7.jpg" },
+  { id: "gallery-8", title: "Maktabimiz hayotidan", description: "Maktab hayotiga bag'ishlangan ko'rgazma devori.", url: "/gallery/8.jpg" },
+  { id: "gallery-9", title: "Maktab yo'lagi", description: "Rang-barang bezatilgan maktab yo'lagi.", url: "/gallery/9.jpg" },
+  { id: "gallery-10", title: "Texnologiya xonasi", description: "Tikuv mashinalari bilan jihozlangan xona.", url: "/gallery/10.jpg" },
+  { id: "gallery-11", title: "Sport zali", description: "Keng va yorug' sport zali.", url: "/gallery/11.jpg" },
+  { id: "gallery-12", title: "Futbol maydoni", description: "O'quvchilar sun'iy qoplamali maydonda.", url: "/gallery/12.jpg" },
+];
+
 export const initialVideos: VideoItem[] = [
   {
     id: "yt-DqgC3jlpIhM",

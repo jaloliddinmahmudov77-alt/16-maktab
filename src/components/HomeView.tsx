@@ -1,6 +1,7 @@
 import React from 'react';
 import { PageTab, SchoolInfo, NewsItem, VideoItem } from '../types';
 import { openVideo } from '../utils/videoUtils';
+import { schoolPhotos } from '../data/initialData';
 import { HeroSection } from './HeroSection';
 import {
   Newspaper,
@@ -261,6 +262,43 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 <p className="text-xs text-slate-400 line-clamp-2 leading-relaxed">
                   {vid.description}
                 </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* School Photos Preview */}
+      <section id="home-photo-grid" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+        <div className="flex items-end justify-between border-b border-slate-800 pb-4">
+          <div>
+            <div className="flex items-center gap-2 text-indigo-400 text-xs font-semibold uppercase tracking-wider mb-1">
+              <ImageIcon className="w-4 h-4" />
+              <span>Fotosuratlar</span>
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
+              Maktabimizdan Lavhalar
+            </h2>
+          </div>
+          <button
+            onClick={() => setActiveTab('galereya')}
+            className="text-sm font-semibold text-indigo-400 hover:text-indigo-300 flex items-center gap-1 group"
+          >
+            <span>Barcha rasmlar</span>
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </button>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {schoolPhotos.slice(0, 8).map((photo) => (
+            <div
+              key={photo.id}
+              onClick={() => setActiveTab('galereya')}
+              className="relative h-44 rounded-2xl overflow-hidden border border-slate-800 group cursor-pointer shadow-md"
+            >
+              <img src={photo.url} alt={photo.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/90 to-transparent p-3 pt-8">
+                <span className="text-xs font-bold text-white line-clamp-1">{photo.title}</span>
               </div>
             </div>
           ))}
