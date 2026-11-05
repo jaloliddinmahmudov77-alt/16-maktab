@@ -35,6 +35,7 @@ export interface NewsItem {
   image: string;
   views: number;
   featured?: boolean;
+  link?: string; // original post (e.g. Instagram)
 }
 
 export interface PhotoItem {

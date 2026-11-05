@@ -191,6 +191,17 @@ export const NewsView: React.FC<NewsViewProps> = ({
                 {selectedNews.content}
               </div>
 
+              {selectedNews.link && (
+                <a
+                  href={selectedNews.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-pink-400 hover:text-pink-300"
+                >
+                  Instagram'da ko'rish →
+                </a>
+              )}
+
               <div className="pt-6 border-t border-slate-800 flex items-center justify-between">
                 <span className="text-xs text-slate-500">Sardoba tumani 16-sonli maktab matbuot xizmati</span>
                 <button

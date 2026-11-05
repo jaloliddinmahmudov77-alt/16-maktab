@@ -1,9 +1,11 @@
+import "dotenv/config";
 import express from "express";
 import path from "path";
 import fs from "fs";
 import { createServer as createViteServer } from "vite";
 import { GoogleGenAI } from "@google/genai";
 import { fetchChannelVideos } from "./api/videos.js";
+import { fetchInstagramNews } from "./api/news.js";
 import {
   initialSchoolInfo,
   initialNews,
@@ -280,7 +282,21 @@ JAVOB BERISH QOIDALARI:
   });
 
   // News CRUD
-  app.get("/api/news", (req, res) => res.json(newsList));
+  // With INSTAGRAM_TOKEN set, news come from Instagram (same as the Vercel function)
+  let instagramNews: NewsItem[] | null = null;
+  let instagramNewsAt = 0;
+  app.get("/api/news", async (req, res) => {
+    const token = process.env.INSTAGRAM_TOKEN;
+    if (token && (!instagramNews || Date.now() - instagramNewsAt > 15 * 60 * 1000)) {
+      try {
+        instagramNews = await fetchInstagramNews(token);
+        instagramNewsAt = Date.now();
+      } catch (err) {
+        console.error("Instagram error:", err);
+      }
+    }
+    res.json(instagramNews ?? newsList);
+  });
   app.post("/api/news", (req, res) => {
     const newItem: NewsItem = {
       id: "news-" + Date.now(),
