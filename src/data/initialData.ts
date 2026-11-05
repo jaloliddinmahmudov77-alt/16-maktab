@@ -578,11 +578,13 @@ export const initialTeachers: TeacherItem[] = [
   },
   {
     id: "team-33",
-    name: "Jamoa a'zosi 33",
+    name: "Ga'niyeva Ruxshona",
     role: "O'qituvchi",
-    subject: "",
+    subject: "Ona tili va adabiyot",
     qualification: "",
-    experience: "",
-    photo: "/team/33.jpg"
+    experience: "10",
+    photo: "/team/33.jpg",
+    category: "Aniq fanlar",
+    awards: []
   }
 ];
